@@ -1,0 +1,22 @@
+//
+//  Gama-Prefix.pch
+//  Gama
+//
+//  Created by Paul on 16/1/4.
+//  Copyright © 2016年 Paul. All rights reserved.
+//
+
+#ifndef Gama_Prefix_pch
+#define Gama_Prefix_pch
+
+#import "DataKey.h"
+#import "ViewKey.h"
+#import "NoteKey.h"
+
+
+#define SCREEN_WIDTH_RATIO [[UIScreen mainScreen] bounds].size.width / 375
+#define FontSize(fSize) [UIFont fontWithName:@"Arial" size:(fSize)]
+
+#define isIOS7  ([[UIDevice currentDevice].systemVersion doubleValue] < 8.0)
+#define kHost @""
+#endif

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WebWindowView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-M2-vL3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hi-1x-54M">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui1-Yy-W8U">
+                            <rect key="frame" x="12" y="9" width="350" height="650"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="J4U-B0-ext"/>
+                            </connections>
+                        </webView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-sN-tJ9">
+                            <rect key="frame" x="312" y="9" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="bFU-Gw-rhJ"/>
+                                <constraint firstAttribute="width" secondItem="Rpr-sN-tJ9" secondAttribute="height" multiplier="1:1" id="n0U-JH-dkv"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="bt_cancel"/>
+                            <connections>
+                                <action selector="_backAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="uGt-kb-rhc"/>
+                            </connections>
+                        </button>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JlK-G7-CrH">
+                            <rect key="frame" x="178" y="323" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ui1-Yy-W8U" firstAttribute="top" secondItem="9hi-1x-54M" secondAttribute="top" constant="9" id="0Mc-Y6-0rE"/>
+                        <constraint firstItem="ui1-Yy-W8U" firstAttribute="leading" secondItem="9hi-1x-54M" secondAttribute="leading" constant="12" id="2Me-ge-HNK"/>
+                        <constraint firstItem="JlK-G7-CrH" firstAttribute="centerX" secondItem="9hi-1x-54M" secondAttribute="centerX" id="ABo-81-TSp"/>
+                        <constraint firstAttribute="trailing" secondItem="ui1-Yy-W8U" secondAttribute="trailing" constant="13" id="On0-Em-IgJ"/>
+                        <constraint firstItem="Rpr-sN-tJ9" firstAttribute="top" secondItem="ui1-Yy-W8U" secondAttribute="top" id="Qyb-6F-ENT"/>
+                        <constraint firstAttribute="bottom" secondItem="ui1-Yy-W8U" secondAttribute="bottom" constant="8" id="arg-l8-5H1"/>
+                        <constraint firstItem="JlK-G7-CrH" firstAttribute="centerY" secondItem="9hi-1x-54M" secondAttribute="centerY" id="oeJ-zp-fda"/>
+                        <constraint firstItem="Rpr-sN-tJ9" firstAttribute="trailing" secondItem="ui1-Yy-W8U" secondAttribute="trailing" id="yPO-an-uEF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cqT-M2-vL3" secondAttribute="trailing" id="8vd-Zd-QTB"/>
+                <constraint firstItem="cqT-M2-vL3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ceh-wM-9uV"/>
+                <constraint firstItem="9hi-1x-54M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Fbo-hv-Hfy"/>
+                <constraint firstAttribute="bottom" secondItem="9hi-1x-54M" secondAttribute="bottom" id="JbV-Mu-bnn"/>
+                <constraint firstAttribute="bottom" secondItem="cqT-M2-vL3" secondAttribute="bottom" id="X6w-qN-v6S"/>
+                <constraint firstItem="9hi-1x-54M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f2m-J1-sLZ"/>
+                <constraint firstAttribute="trailing" secondItem="9hi-1x-54M" secondAttribute="trailing" id="g72-QL-ExM"/>
+                <constraint firstItem="cqT-M2-vL3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iMh-Bu-TGd"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="_activity" destination="JlK-G7-CrH" id="HWL-Pu-dFd"/>
+                <outlet property="_bgIV" destination="cqT-M2-vL3" id="PSP-kM-sDA"/>
+                <outlet property="_contentView" destination="9hi-1x-54M" id="7HS-9m-QNT"/>
+                <outlet property="_webView" destination="ui1-Yy-W8U" id="dmB-Vd-fXc"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="bt_cancel" width="50" height="50"/>
+    </resources>
+</document>

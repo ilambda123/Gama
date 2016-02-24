@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FNJ-fJ-JmF" customClass="PickerAddView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wt0-1X-EZL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-VI-3D9">
+                    <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx3-RB-l7a">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="I6H-Ey-gEH"/>
+                                <constraint firstAttribute="width" secondItem="Sx3-RB-l7a" secondAttribute="height" multiplier="2:1" id="hPp-D3-oDy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.20392156859999999" green="0.57254901960000004" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="_cancelAction:" destination="FNJ-fJ-JmF" eventType="touchUpInside" id="chh-j4-v4D"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrG-F1-RpD">
+                            <rect key="frame" x="147" y="0.0" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="2q7-et-Jii"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="删除">
+                                <color key="titleColor" red="0.96862745100000003" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="_deleteKeyAction:" destination="FNJ-fJ-JmF" eventType="touchUpInside" id="6Wb-qD-RLY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-Ma-F5e">
+                            <rect key="frame" x="295" y="0.0" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Hvi-Ma-F5e" secondAttribute="height" multiplier="2:1" id="48p-04-cMN"/>
+                                <constraint firstAttribute="width" constant="80" id="Ghk-3n-fQk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="完成">
+                                <color key="titleColor" red="0.20392156859999999" green="0.57254901960000004" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="_finishAction:" destination="FNJ-fJ-JmF" eventType="touchUpInside" id="YQy-F7-6U7"/>
+                            </connections>
+                        </button>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u00-kK-J3s">
+                            <rect key="frame" x="0.0" y="40" width="375" height="160"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="u00-kK-J3s" secondAttribute="height" multiplier="75:32" id="sjQ-C8-yk7"/>
+                                <constraint firstAttribute="width" constant="375" id="vsn-lT-XEf"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="FNJ-fJ-JmF" id="NSv-YF-dFg"/>
+                                <outlet property="delegate" destination="FNJ-fJ-JmF" id="Ee5-u3-sE3"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="u00-kK-J3s" firstAttribute="leading" secondItem="MQ3-VI-3D9" secondAttribute="leading" id="DrQ-N1-CZJ"/>
+                        <constraint firstItem="qrG-F1-RpD" firstAttribute="top" secondItem="MQ3-VI-3D9" secondAttribute="top" id="KJb-cA-B8t"/>
+                        <constraint firstItem="Hvi-Ma-F5e" firstAttribute="top" secondItem="MQ3-VI-3D9" secondAttribute="top" id="Nse-oB-wW3"/>
+                        <constraint firstItem="Sx3-RB-l7a" firstAttribute="top" secondItem="MQ3-VI-3D9" secondAttribute="top" id="OMR-wA-f0I"/>
+                        <constraint firstItem="qrG-F1-RpD" firstAttribute="centerX" secondItem="MQ3-VI-3D9" secondAttribute="centerX" id="Z1q-bK-FVL"/>
+                        <constraint firstAttribute="trailing" secondItem="u00-kK-J3s" secondAttribute="trailing" id="ZyR-KE-rQG"/>
+                        <constraint firstItem="qrG-F1-RpD" firstAttribute="width" secondItem="qrG-F1-RpD" secondAttribute="height" multiplier="2:1" id="baw-De-Xf8"/>
+                        <constraint firstAttribute="width" secondItem="MQ3-VI-3D9" secondAttribute="height" multiplier="15:8" id="iPs-eQ-OX3"/>
+                        <constraint firstAttribute="trailing" secondItem="Hvi-Ma-F5e" secondAttribute="trailing" id="jW8-IP-SvY"/>
+                        <constraint firstAttribute="width" constant="375" id="jlU-Cn-wNl"/>
+                        <constraint firstItem="Sx3-RB-l7a" firstAttribute="leading" secondItem="MQ3-VI-3D9" secondAttribute="leading" id="kf6-OS-dwJ"/>
+                        <constraint firstAttribute="bottom" secondItem="u00-kK-J3s" secondAttribute="bottom" id="wRw-bm-OiF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wt0-1X-EZL" secondAttribute="bottom" id="3Yj-Z9-dl5"/>
+                <constraint firstItem="wt0-1X-EZL" firstAttribute="top" secondItem="FNJ-fJ-JmF" secondAttribute="top" id="5iD-HU-hKi"/>
+                <constraint firstAttribute="trailing" secondItem="MQ3-VI-3D9" secondAttribute="trailing" id="S7T-Pb-AZ2"/>
+                <constraint firstItem="MQ3-VI-3D9" firstAttribute="leading" secondItem="FNJ-fJ-JmF" secondAttribute="leading" id="SMC-lS-VTz"/>
+                <constraint firstAttribute="trailing" secondItem="wt0-1X-EZL" secondAttribute="trailing" id="Xly-FO-Haq"/>
+                <constraint firstAttribute="bottom" secondItem="MQ3-VI-3D9" secondAttribute="bottom" id="an7-lk-RzZ"/>
+                <constraint firstItem="wt0-1X-EZL" firstAttribute="leading" secondItem="FNJ-fJ-JmF" secondAttribute="leading" id="e4l-8l-mTs"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="_bgIV" destination="wt0-1X-EZL" id="XKF-Tx-0iE"/>
+                <outlet property="_deleteBt" destination="qrG-F1-RpD" id="ieB-Lg-uXu"/>
+                <outlet property="_finishBt" destination="Hvi-Ma-F5e" id="Sst-eT-Fhq"/>
+                <outlet property="_mainButtonLc" destination="an7-lk-RzZ" id="vdT-vn-uEV"/>
+                <outlet property="_mainView" destination="MQ3-VI-3D9" id="WI3-jI-ebj"/>
+                <outlet property="_pickerView" destination="u00-kK-J3s" id="oNJ-O4-yCW"/>
+            </connections>
+            <point key="canvasLocation" x="413.5" y="407.5"/>
+        </view>
+    </objects>
+</document>
