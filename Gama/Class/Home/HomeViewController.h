@@ -8,10 +8,9 @@
 
 #import "GamaBaseViewController.h"
 
-@class SwipeDeleteTableView;
 @interface HomeViewController : GamaBaseViewController
 {
-    __weak IBOutlet SwipeDeleteTableView *_tableView;
+    __weak IBOutlet UITableView *_tableView;
     __weak IBOutlet UIButton *_addBt;
 }
 @end

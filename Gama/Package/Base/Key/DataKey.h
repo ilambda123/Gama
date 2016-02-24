@@ -6,10 +6,11 @@
 //  Copyright © 2016年 Paul. All rights reserved.
 //
 
-#define kIOSAppId @"1077166421"
 #define kStartPage 1
 #define kLimitPage 20
 #define IOSAppKey @"1033726126"
+#define kJPushID @"1111"
+
 
 #define kID @"id"
 #define kLastID @"lasdId"

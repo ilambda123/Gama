@@ -16,7 +16,7 @@
 #import "ProductData.h"
 #import "HomeCell.h"
 #import "NSNotificationKey.h"
-#import "SwipeDeleteTableView.h"
+//#import "SwipeDeleteTableView.h"
 #import "HomeHeadView.h"
 #import "HomeToolView.h"
 #import "HomeTypeWindow.h"
@@ -362,7 +362,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     if ((tag == kAlertUpdateTag && buttonIndex == 1) ||
         (tag == kAlertForceUpdateTag && buttonIndex == 0))
     {
-        [AppUtils openAppStore:kIOSAppId];
+        [AppUtils openAppStore:IOSAppKey];
     }
 }
 

@@ -163,7 +163,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandl
     if ((tag == kAlertUpdateTag && buttonIndex == 1) ||
         (tag == kAlertForceUpdateTag && buttonIndex == 0))
     {
-        [AppUtils openAppStore:kIOSAppId];
+        [AppUtils openAppStore:IOSAppKey];
     }
 }
 @end
